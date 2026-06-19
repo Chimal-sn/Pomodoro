@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
     <div class="overlay"></div>
 
     <video autoplay muted loop src="assets/video/fondo_ciudad.mp4" class="video_fondo"></video>
-    <audio src="assets/audio/cancion1.mp3" preload="none"></audio>
+    <audio src="assets/audio/cancion1.mp3" preload="none" id="audio_musica"></audio>
     <video autoplay muted loop src="assets/video/fondo_ciudad.mp4" class="video_calidad"></video>
 
     <div class="botones_reproduccion">
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <title xmlns="">prev</title>
+            <title xmlns="">Anterior</title>
             <path fill="currentColor" d="M6 4h2v16H6zm12 0h-2v2h-2v3h-2v2h-2v2h2v3h2v2h2v2h2z" />
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" id="boton_play">
-            <title xmlns="">play</title>
+            <title xmlns="">Reproducir</title>
             <path fill="currentColor"
                 d="M15 11h-2V9h2zm0 4h-2v-2h2zm-2 2h-2v-2h2zm0-8h-2V7h2zm-2-2H9V5h2zM9 21H7V3h2zm6-8h2v-2h-2zm-6 4h2v2H9z" />
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" id="boton_pausa">
-            <title xmlns="">pause</title>
+            <title xmlns="">Pausa</title>
             <path fill="currentColor" d="M10 4H5v16h5zm9 0h-5v16h5z" />
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <title xmlns="">next</title>
+            <title xmlns="">Siguiente</title>
             <path fill="currentColor" d="M6 4h2v2h2v2h2v2h2v4h-2v2h-2v2H8v2H6zm12 0h-2v16h2z" />
         </svg>
     </div>
