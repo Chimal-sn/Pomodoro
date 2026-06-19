@@ -13,3 +13,8 @@ botonpausa.addEventListener('click', () => {
     botonplay.style.display = 'block';
     botonpausa.style.display = 'none';
 })
+
+audio.addEventListener('ended', () => {
+    botonplay.style.display = 'block';
+    botonpausa.style.display = 'none';
+})
