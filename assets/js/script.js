@@ -10,8 +10,11 @@ let cancionActual = 0;
 
 const botonplay = document.getElementById('boton_play');
 const botonpausa = document.getElementById('boton_pausa');
-const boton_siguiente = document.getElementById('boton_siguiente')
+const boton_siguiente = document.getElementById('boton_siguiente');
+const boton_atras = document.getElementById('boton_atras');
 const audio = document.getElementById('audio_musica');
+const nombreCancion = document.getElementById('nombre_cancion');
+const artistaCancion = document.getElementById('artista_cancion');
 
 botonplay.addEventListener('click', () => {
     audio.src = listaCanciones[cancionActual].ruta;
@@ -38,4 +41,22 @@ boton_siguiente.addEventListener('click', () => {
     }
     audio.src = listaCanciones[cancionActual].ruta;
     audio.play();
+    agregarDetallesCancion();
 })
+
+boton_atras.addEventListener('click', () => {
+    cancionActual--;
+    if (cancionActual < 0) {
+        cancionActual = listaCanciones.length - 1;
+    }
+    audio.src = listaCanciones[cancionActual].ruta;
+    audio.play();
+    agregarDetallesCancion();
+})
+
+function agregarDetallesCancion() {
+    nombreCancion.textContent = `${listaCanciones[cancionActual].nombre} - `;
+    artistaCancion.textContent = `${listaCanciones[cancionActual].artista}`;
+}
+
+agregarDetallesCancion();
