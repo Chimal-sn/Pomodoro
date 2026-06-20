@@ -1,3 +1,11 @@
+import Cancion from "./cancion.js";
+
+const listaCanciones = [
+    new Cancion("Honey Jam", "Massobeats", "cancion1.mp3"),
+    new Cancion("Anxiety", "Rama Low", "cancion2.mp3"),
+
+];
+
 const botonplay = document.getElementById('boton_play');
 const botonpausa = document.getElementById('boton_pausa');
 const audio = document.getElementById('audio_musica');
