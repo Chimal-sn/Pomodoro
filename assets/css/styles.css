@@ -25,6 +25,7 @@ body {
         z-index: 1;
     }
 
+
     .video_fondo {
         position: absolute;
         width: 100%;
@@ -34,9 +35,26 @@ body {
     }
 
     .video_calidad {
+        position: relative;
         z-index: 2;
         max-width: 800px;
         width: 90%;
+        border-radius: 10px;
+
+        video {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        svg {
+            position: absolute;
+            color: #fff;
+            font-size: 3rem;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
     }
 
     .detalles_cancion {

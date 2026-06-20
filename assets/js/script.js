@@ -5,6 +5,12 @@ const listaCanciones = [
     new Cancion("Anxiety", "Rama Low", "cancion2.mp3"),
 
 ];
+
+const listaFondos = [
+    "assets/video/fondo_ciudad.mp4",
+    "assets/video/fondo_edificios.mp4",
+];
+
 let cancionActual = 0;
 const botonplay = document.getElementById('boton_play');
 const botonpausa = document.getElementById('boton_pausa');
@@ -28,8 +34,13 @@ botonpausa.addEventListener('click', () => {
 })
 
 audio.addEventListener('ended', () => {
-    botonplay.style.display = 'block';
-    botonpausa.style.display = 'none';
+    cancionActual++;
+    if (cancionActual >= listaCanciones.length) {
+        cancionActual = 0;
+    }
+    audio.src = listaCanciones[cancionActual].ruta;
+    audio.play();
+    agregarDetallesCancion();
 })
 
 boton_siguiente.addEventListener('click', () => {
