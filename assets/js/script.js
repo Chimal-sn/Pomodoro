@@ -12,6 +12,7 @@ const listaFondos = [
 ];
 
 let cancionActual = 0;
+let videoActual = 0;
 const botonplay = document.getElementById('boton_play');
 const botonpausa = document.getElementById('boton_pausa');
 const boton_siguiente = document.getElementById('boton_siguiente');
@@ -19,9 +20,11 @@ const boton_atras = document.getElementById('boton_atras');
 const audio = document.getElementById('audio_musica');
 const nombreCancion = document.getElementById('nombre_cancion');
 const artistaCancion = document.getElementById('artista_cancion');
+const cambiarVideo = document.getElementById('cambiar_video');
+const videoCalidad = document.getElementById('video_calidad');
+const videoFondo = document.getElementById('video_fondo');
 
 botonplay.addEventListener('click', () => {
-    audio.src = listaCanciones[cancionActual].ruta;
     audio.play();
     botonplay.style.display = 'none';
     botonpausa.style.display = 'block';
@@ -69,3 +72,12 @@ function agregarDetallesCancion() {
 }
 
 agregarDetallesCancion();
+
+cambiarVideo.addEventListener('click', () => {
+    videoActual++;
+    if (videoActual >= listaFondos.length) {
+        videoActual = 0;
+    }
+    videoCalidad.src = listaFondos[videoActual];
+    videoFondo.src = listaFondos[videoActual];
+})
