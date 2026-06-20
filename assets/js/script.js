@@ -5,9 +5,7 @@ const listaCanciones = [
     new Cancion("Anxiety", "Rama Low", "cancion2.mp3"),
 
 ];
-
 let cancionActual = 0;
-
 const botonplay = document.getElementById('boton_play');
 const botonpausa = document.getElementById('boton_pausa');
 const boton_siguiente = document.getElementById('boton_siguiente');

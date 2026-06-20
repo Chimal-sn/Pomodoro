@@ -42,6 +42,7 @@ body {
     .detalles_cancion {
         z-index: 2;
         display: flex;
+        gap: 5px;
 
         p {
             font-size: 1rem;
