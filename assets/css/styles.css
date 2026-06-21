@@ -49,6 +49,7 @@ body {
         z-index: 3;
         max-width: 800px;
         width: 90%;
+        aspect-ratio: 16 / 9;
         border-radius: 10px;
         display: grid;
         overflow: hidden;

@@ -3,17 +3,23 @@ import Cancion from "./cancion.js";
 const listaCanciones = [
     new Cancion("Honey Jam", "Massobeats", "cancion1.mp3"),
     new Cancion("Anxiety", "Rama Low", "cancion2.mp3"),
-
+    new Cancion("Rose Water", "Massobeats", "cancion3.mp3"),
+    new Cancion("Coffe Time", "shushubobo", "cancion4.mp3"),
+    new Cancion("TODO RELAX", "SanelliX Music", "cancion5.mp3"),
 ];
 
 const listaFondos = [
     "assets/video/fondo_ciudad.mp4",
     "assets/video/fondo_edificios.mp4",
+    "assets/video/fondo_metro.mp4",
+    "assets/video/fondo_nieve.mp4",
+    "assets/video/fondo_mar.mp4"
 ];
 
 const listaPoster = [
     "assets/img/fondo_ciudad.webp",
     "assets/img/fondo_edificios.webp",
+    "assets/img/fondo_metro.webp",
 ];
 
 let cancionActual = 0;
