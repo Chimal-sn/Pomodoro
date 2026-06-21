@@ -11,6 +11,11 @@ const listaFondos = [
     "assets/video/fondo_edificios.mp4",
 ];
 
+const listaPoster = [
+    "assets/img/fondo_ciudad.webp",
+    "assets/img/fondo_edificios.webp",
+];
+
 let cancionActual = 0;
 let videoActual = 0;
 let videoActivo = 1; // 1 = video 1, 2 = video 2
@@ -113,7 +118,9 @@ cambiarVideo.addEventListener('click', () => {
     }
 
     fondoSiguiente.src = listaFondos[videoActual];
+    fondoSiguiente.poster = listaPoster[videoActual];
     calidadSiguiente.src = listaFondos[videoActual];
+    calidadSiguiente.poster = listaPoster[videoActual];
     fondoSiguiente.style.zIndex = "1";
     calidadSiguiente.style.zIndex = "1";
 
