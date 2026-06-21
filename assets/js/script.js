@@ -137,6 +137,10 @@ cambiarVideo.addEventListener('click', () => {
     fondoSiguiente.poster = listaPoster[videoActual];
     calidadSiguiente.src = listaFondos[videoActual];
     calidadSiguiente.poster = listaPoster[videoActual];
+
+    fondoSiguiente.play().catch(() => { });
+    calidadSiguiente.play().catch(() => { });
+
     fondoSiguiente.style.zIndex = "1";
     calidadSiguiente.style.zIndex = "1";
 
