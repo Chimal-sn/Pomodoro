@@ -100,8 +100,14 @@ function agregarDetallesCancion() {
 }
 
 function cargarVideo() {
-    videoCalidadSegundo.src = listaFondos[videoActual + 1];
-    videoFondoSegundo.src = listaFondos[videoActual + 1];
+    let proximoVideo = videoActual + 1;
+    if (proximoVideo >= listaFondos.length) {
+        proximoVideo = 0;
+    }
+    videoCalidadSegundo.src = listaFondos[proximoVideo];
+    videoCalidadSegundo.poster = listaPoster[proximoVideo];
+    videoFondoSegundo.src = listaFondos[proximoVideo];
+    videoFondoSegundo.poster = listaPoster[proximoVideo];
 }
 agregarDetallesCancion();
 cargarVideo();
@@ -117,32 +123,27 @@ cambiarVideo.addEventListener('click', () => {
         videoActual = 0;
     }
 
-    let fondoActivo, calidadActivo, fondoSiguiente, calidadSiguiente;
+    let fondoActivo, calidadActivo, fondoOculto, calidadOculta;
 
     if (videoActivo == 1) {
         fondoActivo = videoFondoPrimero;
         calidadActivo = videoCalidadPrimero;
-        fondoSiguiente = videoFondoSegundo;
-        calidadSiguiente = videoCalidadSegundo;
+        fondoOculto = videoFondoSegundo;
+        calidadOculta = videoCalidadSegundo;
         videoActivo = 2;
     } else {
         fondoActivo = videoFondoSegundo;
         calidadActivo = videoCalidadSegundo;
-        fondoSiguiente = videoFondoPrimero;
-        calidadSiguiente = videoCalidadPrimero;
+        fondoOculto = videoFondoPrimero;
+        calidadOculta = videoCalidadPrimero;
         videoActivo = 1;
     }
 
-    fondoSiguiente.src = listaFondos[videoActual];
-    fondoSiguiente.poster = listaPoster[videoActual];
-    calidadSiguiente.src = listaFondos[videoActual];
-    calidadSiguiente.poster = listaPoster[videoActual];
+    fondoOculto.play().catch(() => { });
+    calidadOculta.play().catch(() => { });
 
-    fondoSiguiente.play().catch(() => { });
-    calidadSiguiente.play().catch(() => { });
-
-    fondoSiguiente.style.zIndex = "1";
-    calidadSiguiente.style.zIndex = "1";
+    fondoOculto.style.zIndex = "1";
+    calidadOculta.style.zIndex = "1";
 
     fondoActivo.style.zIndex = "2";
     calidadActivo.style.zIndex = "2";
@@ -161,6 +162,16 @@ cambiarVideo.addEventListener('click', () => {
 
         reiniciarSinAnimacion(fondoActivo);
         reiniciarSinAnimacion(calidadActivo);
+
+        let proximoVideo = videoActual + 1;
+        if (proximoVideo >= listaFondos.length) {
+            proximoVideo = 0;
+        }
+
+        fondoActivo.src = listaFondos[proximoVideo];
+        fondoActivo.poster = listaPoster[proximoVideo];
+        calidadActivo.src = listaFondos[proximoVideo];
+        calidadActivo.poster = listaPoster[proximoVideo];
 
         enTransicion = false;
     }, 800);
