@@ -5,12 +5,20 @@
     font-family: 'Pixelify Sans', sans-serif;
 }
 
-html, body {
-    background-color: #000;
-    width: 100dvw;
-    height: 100dvh;
+html {
     overflow: hidden;
-    overscroll-behavior: none; /* Previene el rebote y recarga al estirar la pantalla */
+    overscroll-behavior: none;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    overscroll-behavior: none;
     display: flex;
     justify-content: center;
     align-items: center;
