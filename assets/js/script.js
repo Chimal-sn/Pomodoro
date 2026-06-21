@@ -6,6 +6,8 @@ const listaCanciones = [
     new Cancion("Rose Water", "Massobeats", "cancion3.mp3"),
     new Cancion("Coffe Time", "shushubobo", "cancion4.mp3"),
     new Cancion("TODO RELAX", "SanelliX Music", "cancion5.mp3"),
+    new Cancion("Purple", "Chillpeach", "cancion6.mp3"),
+    new Cancion("Hamstar", "shushubobo", "cancion7.mp3")
 ];
 
 const listaFondos = [
@@ -13,13 +15,21 @@ const listaFondos = [
     "assets/video/fondo_edificios.mp4",
     "assets/video/fondo_metro.mp4",
     "assets/video/fondo_nieve.mp4",
-    "assets/video/fondo_mar.mp4"
+    "assets/video/fondo_mar.mp4",
+    "assets/video/fondo_castillo.mp4",
+    "assets/video/fondo_bar.mp4",
+    "assets/video/fondo_fogata.mp4"
 ];
 
 const listaPoster = [
     "assets/img/fondo_ciudad.webp",
     "assets/img/fondo_edificios.webp",
     "assets/img/fondo_metro.webp",
+    "assets/img/fondo_nieve.webp",
+    "assets/img/fondo_mar.webp",
+    "assets/img/fondo_castillo.webp",
+    "assets/img/fondo_bar.webp",
+    "assets/img/fondo_fogata.webp"
 ];
 
 let cancionActual = 0;
